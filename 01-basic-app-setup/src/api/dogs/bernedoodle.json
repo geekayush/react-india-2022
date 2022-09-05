@@ -6,7 +6,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Bessie",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704518/1/?bust=1660798646"
+            "image": "/images/bernedoodle/56704518.jpeg"
         },
         {
             "id": 56704355,
@@ -14,7 +14,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Jillian",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704355/1/?bust=1660795592"
+            "image": "/images/bernedoodle/56704355.jpeg"
         },
         {
             "id": 56704313,
@@ -22,7 +22,7 @@
             "gender": "Male",
             "size": "Medium",
             "name": "Jensen",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704313/1/?bust=1660794934"
+            "image": "/images/bernedoodle/56704313.jpeg"
         },
         {
             "id": 56704316,
@@ -30,7 +30,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Juliette",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704316/1/?bust=1660794867"
+            "image": "/images/bernedoodle/56704316.jpeg"
         },
         {
             "id": 56704304,
@@ -38,7 +38,7 @@
             "gender": "Male",
             "size": "Medium",
             "name": "Jaxon",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704304/1/?bust=1660794756"
+            "image": "/images/bernedoodle/56704304.jpeg"
         },
         {
             "id": 56703909,
@@ -46,7 +46,7 @@
             "gender": "Male",
             "size": "Medium",
             "name": "Jack",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703909/1/?bust=1660789159"
+            "image": "/images/bernedoodle/56703909.jpeg"
         },
         {
             "id": 56703896,
@@ -54,7 +54,7 @@
             "gender": "Male",
             "size": "Medium",
             "name": "Louise",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703896/1/?bust=1660788835"
+            "image": "/images/bernedoodle/56703896.jpeg"
         },
         {
             "id": 56703881,
@@ -62,7 +62,7 @@
             "gender": "Male",
             "size": "Medium",
             "name": "William",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703881/1/?bust=1660788488"
+            "image": "/images/bernedoodle/56703881.jpeg"
         },
         {
             "id": 56703858,
@@ -70,7 +70,7 @@
             "gender": "Male",
             "size": "Medium",
             "name": "Toby",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703858/1/?bust=1660788113"
+            "image": "/images/bernedoodle/56703858.jpeg"
         },
         {
             "id": 56703738,
@@ -78,7 +78,7 @@
             "gender": "Male",
             "size": "Medium",
             "name": "Hank",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703738/1/?bust=1660786001"
+            "image": "/images/bernedoodle/56703738.jpeg"
         },
         {
             "id": 56703730,
@@ -86,7 +86,7 @@
             "gender": "Male",
             "size": "Medium",
             "name": "Billy Bob",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703730/1/?bust=1660785822"
+            "image": "/images/bernedoodle/56703730.jpeg"
         },
         {
             "id": 56703691,
@@ -94,7 +94,7 @@
             "gender": "Male",
             "size": "Small",
             "name": "Jake",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703691/1/?bust=1660784906"
+            "image": "/images/bernedoodle/56703691.jpeg"
         },
         {
             "id": 56703683,
@@ -102,7 +102,7 @@
             "gender": "Male",
             "size": "Medium",
             "name": "Beagle Boy",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703683/1/?bust=1660784823"
+            "image": "/images/bernedoodle/56703683.jpeg"
         },
         {
             "id": 56703569,
@@ -110,7 +110,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Gwen",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703569/1/?bust=1660782930"
+            "image": "/images/bernedoodle/56703569.jpeg"
         },
         {
             "id": 56703558,
@@ -118,7 +118,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Cricket",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703558/1/?bust=1660782567"
+            "image": "/images/bernedoodle/56703558.jpeg"
         },
         {
             "id": 56703507,
@@ -126,7 +126,7 @@
             "gender": "Female",
             "size": "Small",
             "name": "Cleo",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703507/1/?bust=1660781534"
+            "image": "/images/bernedoodle/56703507.jpeg"
         }
     ]
 }

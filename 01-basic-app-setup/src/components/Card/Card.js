@@ -5,7 +5,7 @@ const Card = ({ url, image, header, description }) => (
         <Link to={url}>
             {image && (
                 <figure className="thumbnail">
-                    <img src={image} alt="meow" />
+                    <img src={`${image}`} alt="meow" />
                 </figure>
             )}
             {(header || description) && (

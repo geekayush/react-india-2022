@@ -6,7 +6,7 @@
             "gender": "Male",
             "size": "Large",
             "name": "Marley",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704134/1/?bust=1660790209"
+            "image": "/images/akita/56704134.jpeg"
         },
         {
             "id": 56703487,
@@ -14,7 +14,7 @@
             "gender": "Female",
             "size": "Large",
             "name": "Santana",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56703487/1/?bust=1660780812"
+            "image": "/images/akita/56703487.jpeg"
         },
         {
             "id": 56699306,
@@ -22,7 +22,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Samantha",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56699306/3/?bust=1660777868"
+            "image": "/images/akita/56699306.jpeg"
         },
         {
             "id": 56696595,
@@ -30,7 +30,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Cocoa",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56696595/1/?bust=1660691800"
+            "image": "/images/akita/56696595.jpeg"
         },
         {
             "id": 56695263,
@@ -38,7 +38,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Juno",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56695263/1/?bust=1660685772"
+            "image": "/images/akita/56695263.jpeg"
         },
         {
             "id": 56694707,
@@ -46,7 +46,7 @@
             "gender": "Male",
             "size": "Large",
             "name": "Rick Ross",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56694707/1/?bust=1660683631"
+            "image": "/images/akita/56694707.jpeg"
         },
         {
             "id": 56693465,
@@ -54,7 +54,7 @@
             "gender": "Male",
             "size": "Extra Large",
             "name": "Bart",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56693465/1/?bust=1660678386"
+            "image": "/images/akita/56693465.jpeg"
         },
         {
             "id": 56692179,
@@ -62,7 +62,7 @@
             "gender": "Female",
             "size": "Large",
             "name": "Chena",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56692179/1/?bust=1660674047"
+            "image": "/images/akita/56692179.jpeg"
         },
         {
             "id": 56688433,
@@ -70,7 +70,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Sasha",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56688433/1/?bust=1660659528"
+            "image": "/images/akita/56688433.jpeg"
         },
         {
             "id": 56686995,
@@ -78,7 +78,7 @@
             "gender": "Female",
             "size": "Medium",
             "name": "Honey",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56686995/1/?bust=1660634169"
+            "image": "/images/akita/56686995.jpeg"
         },
         {
             "id": 56686949,
@@ -86,7 +86,7 @@
             "gender": "Male",
             "size": "Large",
             "name": "Maguire",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56686949/1/?bust=1660633062"
+            "image": "/images/akita/56686949.jpeg"
         },
         {
             "id": 56686932,
@@ -94,7 +94,7 @@
             "gender": "Male",
             "size": "Large",
             "name": "Milo",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56686932/1/?bust=1660632673"
+            "image": "/images/akita/56686932.jpeg"
         },
         {
             "id": 56683058,
@@ -102,7 +102,7 @@
             "gender": "Male",
             "size": "Extra Large",
             "name": "Yoshi",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56683058/1/?bust=1660598249"
+            "image": "/images/akita/56683058.jpeg"
         },
         {
             "id": 56677061,
@@ -110,7 +110,7 @@
             "gender": "Male",
             "size": "Large",
             "name": "Constantine",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56677061/1/?bust=1660558907"
+            "image": "/images/akita/56677061.jpeg"
         },
         {
             "id": 56677007,
@@ -118,7 +118,7 @@
             "gender": "Female",
             "size": "Large",
             "name": "Luna",
-            "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56677007/1/?bust=1660558370"
+            "image": "/images/akita/56677007.jpeg"
         }
     ]
 }

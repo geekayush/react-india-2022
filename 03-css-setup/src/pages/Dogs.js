@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import Loader from "../components/Loader/Loader";
 import Card from "../components/Card/Card";
+import css from "./Dogs.module.css"
 
 import { getDogs } from "../api";
 
@@ -24,7 +25,7 @@ const Category = () => {
       {loading ? (
         <Loader />
       ) : (
-        <section className="cards">
+        <section className={css.cards}>
           {dogs.map((dog) => (
             <Card
               url={`/${dog.name?.toLowerCase()}`}

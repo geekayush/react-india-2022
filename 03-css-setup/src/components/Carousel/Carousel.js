@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Carousel.css"
+import css from "./Carousel.module.css"
 
 const Carousel = ({
   images = ["http://pets-images.dev-apis.com/pets/none.jpg"],
@@ -7,9 +7,9 @@ const Carousel = ({
   const [active, setActive] = useState(0);
 
   return (
-    <div className="carousel">
+    <div className={css.carousel}>
       <img src={images[active]} alt="animal" />
-      <div className="carousel-smaller">
+      <div className={css['carousel-smaller']}>
         {images.map((photo, index) => (
           <img
             key={photo}

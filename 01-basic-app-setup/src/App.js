@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Breeds from "./pages/Breeds";
 import Dogs from "./pages/Dogs";
 import Dog from "./pages/Dog";
+import * as _ from "lodash"
 
 import "./static/css/app.css";
 
@@ -20,6 +21,6 @@ function App() {
             </main>
         </div>
     );
-}
+};
 
 export default App;

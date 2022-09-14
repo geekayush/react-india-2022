@@ -5,8 +5,6 @@ import Breeds from "./pages/Breeds";
 import Dogs from "./pages/Dogs";
 import Dog from "./pages/Dog";
 
-import "./static/css/app.css";
-
 function App() {
     return (
         <div>

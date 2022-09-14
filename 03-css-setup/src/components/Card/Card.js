@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import "./Card.css"
+import css from "./Card.module.css"
 
 const Card = ({ url, image, header, description }) => (
-    <article className="card">
+    <article className={css.card}>
         <Link to={url}>
             {image && (
-                <figure className="thumbnail">
+                <figure className={css.thumbnail}>
                     <img src={`${image}`} alt="meow" />
                 </figure>
             )}
             {(header || description) && (
-                <div className="card-content">
+                <div className={css['card-content']}>
                     {header && <h2>{header}</h2>}
                     {description && <p>{description}</p>}
                 </div>

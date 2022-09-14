@@ -4,14 +4,19 @@
     "private": true,
     "dependencies": {
         "axios": "^0.27.2",
+        "cors": "^2.8.5",
+        "lodash": "^4.17.21",
+        "nodemon": "^2.0.19",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.3.0",
-        "react-scripts": "5.0.1"
+        "react-scripts": "5.0.1",
+        "serve-favicon": "^2.5.0"
     },
     "scripts": {
         "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
-        "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build"
+        "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+        "server": "nodemon ./server/index.js"
     },
     "eslintConfig": {
         "extends": [

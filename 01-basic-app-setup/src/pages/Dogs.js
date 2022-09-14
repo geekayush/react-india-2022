@@ -41,6 +41,10 @@ const Category = () => {
 
   }, []);
 
+  useEffect(() => {
+    console.log("dogs value is ::",dogs)
+  }, [dogs])
+
   return (
     <div className="centered">
       <h1>{breed}</h1>

@@ -1,53 +1,16 @@
-import breeds from "./breeds.json";
+import { request } from "../util/request";
 
-import akita from "./dogs/akita.json";
-import aussiedoodle from "./dogs/aussiedoodle.json";
-import beagle from "./dogs/beagle.json";
-import bernedoodle from "./dogs/bernedoodle.json";
-import bloodhound from "./dogs/bloodhound.json";
-import cockapoo from "./dogs/cockapoo.json";
-
-import marley from "./dog/marley.json";
-import iris from "./dog/iris.json";
+const basePath = process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : ''
 
 export const getBreeds = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(breeds), 1000);
-  }).then((response) => response.data);
+  return request.get(`${basePath}/api/breeds`);
 };
 
 export const getDogs = (breed) => {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(giveBreed(breed)), 1000);
-  }).then((response) => response.data);
+  return request.get(`${basePath}/api/dogs/${breed}`);
 };
 
 export const getDog = (name) => {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(giveDog(name)), 1000);
-  }).then((response) => response.data);
+  return request.get(`${basePath}/api/dog/${name}`);
 };
 
-const giveBreed = (breed) => {
-  switch (breed) {
-    case "akita":
-      return akita;
-    case "aussiedoodle":
-      return aussiedoodle;
-    case "beagle":
-      return beagle;
-    case "bernedoodle":
-      return bernedoodle;
-    case "bloodhound":
-      return bloodhound;
-    case "cockapoo":
-      return cockapoo;
-    default:
-      return akita;
-  }
-};
-
-const giveDog = (name) => {
-  if (name.at(0) <= "n") return marley;
-  else return iris;
-};

@@ -7,6 +7,9 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.19",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",
     "babel-plugin-named-asset-import": "^0.3.8",
@@ -37,6 +40,7 @@
     "postcss-preset-env": "^7.0.1",
     "prompts": "^2.4.2",
     "react": "^18.2.0",
+    "serve-favicon": "^2.5.0",
     "react-app-polyfill": "^3.0.0",
     "react-dev-utils": "^12.0.1",
     "react-dom": "^18.2.0",
@@ -56,8 +60,9 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "prod": "npm run build && npm run serve",
-    "serve": "serve -s build",
+    "prod": "npm run build && npm run client:serve",
+    "client:serve": "serve -s build",
+    "server": "nodemon ./server/index.js",
     "start": "DISABLE_ESLINT_PLUGIN=true node scripts/start.js",
     "build": "DISABLE_ESLINT_PLUGIN=true node scripts/build.js"
   },

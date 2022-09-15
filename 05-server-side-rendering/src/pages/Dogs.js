@@ -12,24 +12,12 @@ const Category = () => {
   const [loading, setLoading] = useState(true);
   const [dogs, setDogs] = useState([]);
 
-  const resolveAfter2Seconds = (x) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(x);
-      }, x);
-    });
-  };
-
-  const f1 = async () => {
-    const x = await resolveAfter2Seconds(500);
-    console.log(x); // 10
-  };
-
   useEffect(() => {
     getDogs(breed.toLowerCase()).then((data) => {
       setDogs(data);
       setLoading(false);
     });
+  }, []);
 
   return (
     <div className="centered">

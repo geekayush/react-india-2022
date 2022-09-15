@@ -4,13 +4,16 @@ import { getBreeds } from "../api";
 import Card from "../components/Card/Card";
 import Loader from "../components/Loader/Loader";
 
+import { useSelector, useDispatch } from "react-redux";
+
 const Home = () => {
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-  const [breeds, setBreeds] = useState([]);
+  const breeds = useSelector((state) => state.breeds);
 
   useEffect(() => {
     getBreeds().then((data) => {
-      setBreeds(data);
+      dispatch({ type: "populate/breeds", payload: data });
       setLoading(false);
     });
   }, []);

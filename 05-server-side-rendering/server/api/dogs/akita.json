@@ -1,0 +1,124 @@
+{
+    "data": [
+        {
+            "id": 56704134,
+            "age": "Young",
+            "gender": "Male",
+            "size": "Large",
+            "name": "Marley",
+            "image": "/images/akita/56704134.jpeg"
+        },
+        {
+            "id": 56703487,
+            "age": "Young",
+            "gender": "Female",
+            "size": "Large",
+            "name": "Santana",
+            "image": "/images/akita/56703487.jpeg"
+        },
+        {
+            "id": 56699306,
+            "age": "Young",
+            "gender": "Female",
+            "size": "Medium",
+            "name": "Samantha",
+            "image": "/images/akita/56699306.jpeg"
+        },
+        {
+            "id": 56696595,
+            "age": "Adult",
+            "gender": "Female",
+            "size": "Medium",
+            "name": "Cocoa",
+            "image": "/images/akita/56696595.jpeg"
+        },
+        {
+            "id": 56695263,
+            "age": "Adult",
+            "gender": "Female",
+            "size": "Medium",
+            "name": "Juno",
+            "image": "/images/akita/56695263.jpeg"
+        },
+        {
+            "id": 56694707,
+            "age": "Adult",
+            "gender": "Male",
+            "size": "Large",
+            "name": "Rick Ross",
+            "image": "/images/akita/56694707.jpeg"
+        },
+        {
+            "id": 56693465,
+            "age": "Adult",
+            "gender": "Male",
+            "size": "Extra Large",
+            "name": "Bart",
+            "image": "/images/akita/56693465.jpeg"
+        },
+        {
+            "id": 56692179,
+            "age": "Adult",
+            "gender": "Female",
+            "size": "Large",
+            "name": "Chena",
+            "image": "/images/akita/56692179.jpeg"
+        },
+        {
+            "id": 56688433,
+            "age": "Adult",
+            "gender": "Female",
+            "size": "Medium",
+            "name": "Sasha",
+            "image": "/images/akita/56688433.jpeg"
+        },
+        {
+            "id": 56686995,
+            "age": "Baby",
+            "gender": "Female",
+            "size": "Medium",
+            "name": "Honey",
+            "image": "/images/akita/56686995.jpeg"
+        },
+        {
+            "id": 56686949,
+            "age": "Young",
+            "gender": "Male",
+            "size": "Large",
+            "name": "Maguire",
+            "image": "/images/akita/56686949.jpeg"
+        },
+        {
+            "id": 56686932,
+            "age": "Young",
+            "gender": "Male",
+            "size": "Large",
+            "name": "Milo",
+            "image": "/images/akita/56686932.jpeg"
+        },
+        {
+            "id": 56683058,
+            "age": "Adult",
+            "gender": "Male",
+            "size": "Extra Large",
+            "name": "Yoshi",
+            "image": "/images/akita/56683058.jpeg"
+        },
+        {
+            "id": 56677061,
+            "age": "Adult",
+            "gender": "Male",
+            "size": "Large",
+            "name": "Constantine",
+            "image": "/images/akita/56677061.jpeg"
+        },
+        {
+            "id": 56677007,
+            "age": "Adult",
+            "gender": "Female",
+            "size": "Large",
+            "name": "Luna",
+            "image": "/images/akita/56677007.jpeg"
+        }
+    ]
+}

@@ -6,7 +6,8 @@ const cors = require('cors');
 
 const app = express();
 
-const PublicFolder = path.resolve(__dirname, process.env === "production" ? "../build" : "../public");
+
+const PublicFolder = path.resolve(__dirname, process.env.env !== "dev" ? "../build" : "../public");
 
 if (process.env.env !== "dev")
   app.use(favicon(path.join(__dirname, "../build", "favicon.ico")));

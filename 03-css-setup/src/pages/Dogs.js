@@ -25,7 +25,7 @@ const Category = () => {
       console.log(x); // 10
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     getDogs(breed.toLowerCase()).then((data) => {
       setDogs(data);
       setLoading(false);
@@ -38,7 +38,7 @@ const Category = () => {
     //     }, 100);
     //   })
     // }, 0);
-    await setTimeout(() => {f1()}, 3000)
+    // await setTimeout(() => {f1()}, 3000)
 
   }, []);
 

@@ -19,6 +19,7 @@ const getBreeds = (req, res) => {
 const getDogs = (req, res) => {
   const breed = req.url.substring(1)
     return new Promise((resolve) => {
+        console.log("this was hit!")
         setTimeout(() => resolve(giveBreed(breed)), 100);
     }).then((response) => res.send(response.data));
 };

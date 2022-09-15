@@ -1,6 +1,6 @@
 import { request } from "../util/request";
 
-const basePath = process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : ''
+const basePath = process.env.NODE_ENV !== 'production' ? 'http://localhost:3003' : ''
 
 export const getBreeds = () => {
   return request.get(`${basePath}/api/breeds`);

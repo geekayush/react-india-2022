@@ -29,7 +29,7 @@
     "build": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "ssr": "nodemon ./server/bootstrap.js"
+    "ssr": "rm -rf build && npm run build && nodemon ./server/bootstrap.js"
   },
   "eslintConfig": {
     "extends": [

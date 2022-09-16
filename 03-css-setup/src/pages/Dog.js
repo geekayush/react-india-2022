@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import Loader from "../components/Loader/Loader";
-import Carousel from "../components/Carousel/Carousel";
+import CarouselStyled from "../components/Carousel/Carousel.styled";
 
 import { getDog } from "../api";
 
@@ -40,7 +40,7 @@ const Product = () => {
         <Loader />
       ) : (
         <div className="details">
-          <Carousel images={dog.images} />
+          <CarouselStyled images={dog.images} />
           <div>
             <h1>{dog.name}</h1>
             <h2>{`${dog.animal} — ${dog.breed} — ${dog.city}, ${dog.state}`}</h2>

@@ -1,0 +1,50 @@
+{
+  "name": "03-css-setup",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "customize-cra": "^1.0.0",
+    "html-inline-css-webpack-plugin": "^1.11.1",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.19",
+    "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "serve-favicon": "^2.5.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "nossr:client:serve": "npm run build && serve -s build",
+    "prod": "npm run build && NODE_ENV=production && npm run server",
+    "server": "nodemon ./server/index.js",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-app-rewired start",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

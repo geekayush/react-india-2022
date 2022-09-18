@@ -17,7 +17,7 @@
     "start": "DISABLE_ESLINT_PLUGIN=true NODE_ENV=development react-scripts start",
     "server:dev": "NODE_ENV=development nodemon ./server/index",
     "build": "DISABLE_ESLINT_PLUGIN=true NODE_ENV=production react-scripts build",
-    "serve": " serve -s build",
+    "serve": "serve -s build",
     "server:prod": "NODE_ENV=production nodemon ./server/index"
   },
   "eslintConfig": {

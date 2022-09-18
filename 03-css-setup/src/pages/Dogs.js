@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import Loader from "../components/Loader/Loader";
 import Card from "../components/Card/Card";
-import css from "./Dogs.module.css"
+import css from "./Dogs.module.css";
 
 import { getDogs } from "../api";
 
@@ -12,34 +12,11 @@ const Category = () => {
   const [loading, setLoading] = useState(true);
   const [dogs, setDogs] = useState([]);
 
-  const resolveAfter2Seconds = (x) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(x);
-      }, x);
-    });
-  };
-
-  const f1 = async () => {
-      const x = await resolveAfter2Seconds(500);
-      console.log(x); // 10
-  };
-
   useEffect(() => {
     getDogs(breed.toLowerCase()).then((data) => {
       setDogs(data);
       setLoading(false);
     });
-
-    // setTimeout( () => {
-    //   const x = await new Promise((resolve, reject) => {
-    //     setTimeout(() => {
-    //       resolve()
-    //     }, 100);
-    //   })
-    // }, 0);
-    // await setTimeout(() => {f1()}, 3000)
-
   }, []);
 
   return (

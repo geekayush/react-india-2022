@@ -27,6 +27,7 @@ const Category = () => {
         <section className="cards">
           {dogs.map((dog) => (
             <Card
+              key={dog.id}
               url={`/${dog.name?.toLowerCase()}`}
               header={dog.name}
               description={dog.description || "No dog description present!"}

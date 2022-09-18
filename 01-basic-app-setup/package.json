@@ -17,7 +17,9 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-        "server": "nodemon ./server/index.js"
+        "server": "nodemon ./server/index.js",
+        "nossr:client:serve": "npm run build && serve -s build",
+        "prod": "npm run build && NODE_ENV=production && npm run server"
     },
     "eslintConfig": {
         "extends": [

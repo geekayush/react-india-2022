@@ -6,7 +6,7 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = process.env.SERVER_ENDPOINT ? process.env.SERVER_ENDPOINT : 3001;
+const PORT = process.env.PORT ? process.env.PORT : 3001;
 
 const PublicFolder = path.resolve(
   __dirname,
@@ -19,7 +19,9 @@ app.use("*", cors());
 
 app.use("/api", Api);
 
-app.use("/static", express.static(PublicFolder));
+app.use(express.static(PublicFolder));
+
+app.use("*", express.static(PublicFolder + '/index.html'));
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);

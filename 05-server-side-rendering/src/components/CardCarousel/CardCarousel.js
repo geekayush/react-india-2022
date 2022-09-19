@@ -1,19 +1,20 @@
 // import React, { useState, useRef, useCallback } from "react";
 // import debounce from "lodash/debounce";
-// import css from "./Carousel.module.css";
+// import Card from "../Card/Card";
+// import css from "./CardCarousel.module.css";
 
-// function Carousel({ images }) {
+// function CardCarousel({ dogs }) {
 //   /* Slider Logic Starts here */
 //   const [activeDot, setActiveDot] = useState(0);
-//   const imageSliderRef = useRef(null);
+//   const dogSliderRef = useRef(null);
 
 //   const handleScroll = () => {
 //     const scrolledItem = parseInt(
-//       (parseInt(imageSliderRef.current.scrollWidth) -
-//         parseInt(imageSliderRef.current.scrollLeft)) /
-//         (parseInt(imageSliderRef.current.clientWidth) - 24)
+//       (parseInt(dogSliderRef.current.scrollWidth) -
+//         parseInt(dogSliderRef.current.scrollLeft)) /
+//         (parseInt(dogSliderRef.current.clientWidth) - 24)
 //     );
-//     setActiveDot(images.length - scrolledItem);
+//     setActiveDot(dogs.length - scrolledItem);
 //   };
 
 //   const debouncedChangeDots = useCallback(debounce(handleScroll, 10), []);
@@ -23,35 +24,37 @@
 //     <div className={css.slider}>
 //       <div
 //         className={`container-fluid ${css.slides} ${css.x} ${css.mandatoryScrollSnapping}`}
-//         ref={imageSliderRef}
+//         ref={dogSliderRef}
 //         onScroll={debouncedChangeDots}
 //       >
-//         {images?.map((image, index) => {
+//         {dogs?.map((dog, index) => {
 //           return (
 //             <React.Fragment key={index}>
 //               {index === 0 && <div className={css.spacer} />}
 //               <div className={`col-6 marginBoth-8 ${css.slide}`}>
-//                 <img
-//                   src={image}
-//                   alt="animal thumbnail"
-//                   className={css.bannerImg}
+//                 <Card
+//                     key={dog.id}
+//                     url={`/${dog.name?.toLowerCase()}`}
+//                     header={dog.name}
+//                     image={dog.image}
+//                     imgHeight={200}
+//                     description={`${dog.name} is a friendly ${dog.size?.toLowerCase() || 'small'} sized ${dog.gender?.toLowerCase() || 'female'} ${dog.age?.toLowerCase() || 'young'} dog.`}
+//                     dog={dog.dog}
 //                 />
 //               </div>
-//               {index === images.length - 1 && <div className={css.spacer} />}
+//               {index === dogs.length - 1 && <div className={css.spacer} />}
 //             </React.Fragment>
 //           );
 //         })}
 //       </div>
-//       {images?.length > 1 && (
+//       {dogs?.length > 1 && (
 //         <div className={`col-6 ${css.dotsContainer}`}>
 //           <div className={`flex ${css.dotsScrollableContainer}`}>
-//             {images?.map((el, index) => {
+//             {dogs?.map((_el, index) => {
 //               return (
 //                 <span
 //                   key={index}
-//                   className={`${css.dot} ${
-//                     index === activeDot ? css.activeDot : ""
-//                   }`}
+//                   className={`dot ${index === activeDot ? "activeDot" : ""}`}
 //                 />
 //               );
 //             })}
@@ -62,24 +65,25 @@
 //   );
 // }
 
-// export default Carousel;
+// export default CardCarousel;
 
 
 import React, { useState, useRef, useCallback } from "react";
 import debounce from "lodash/debounce";
+import Card from "../Card/Card";
 
-function Carousel({ images }) {
+function CardCarousel({ dogs }) {
   /* Slider Logic Starts here */
   const [activeDot, setActiveDot] = useState(0);
-  const imageSliderRef = useRef(null);
+  const dogSliderRef = useRef(null);
 
   const handleScroll = () => {
     const scrolledItem = parseInt(
-      (parseInt(imageSliderRef.current.scrollWidth) -
-        parseInt(imageSliderRef.current.scrollLeft)) /
-        (parseInt(imageSliderRef.current.clientWidth) - 24)
+      (parseInt(dogSliderRef.current.scrollWidth) -
+        parseInt(dogSliderRef.current.scrollLeft)) /
+        (parseInt(dogSliderRef.current.clientWidth) - 24)
     );
-    setActiveDot(images.length - scrolledItem);
+    setActiveDot(dogs.length - scrolledItem);
   };
 
   const debouncedChangeDots = useCallback(debounce(handleScroll, 10), []);
@@ -89,35 +93,37 @@ function Carousel({ images }) {
     <div className="slider">
       <div
         className="container-fluid slides x mandatoryScrollSnapping"
-        ref={imageSliderRef}
+        ref={dogSliderRef}
         onScroll={debouncedChangeDots}
       >
-        {images?.map((image, index) => {
+        {dogs?.map((dog, index) => {
           return (
             <React.Fragment key={index}>
               {index === 0 && <div className="spacer" />}
               <div className="col-6 marginBoth-8 slide">
-                <img
-                  src={image}
-                  alt="animal thumbnail"
-                  className="bannerImg"
+                <Card
+                    key={dog.id}
+                    url={`/${dog.name?.toLowerCase()}`}
+                    header={dog.name}
+                    image={dog.image}
+                    imgHeight={200}
+                    description={`${dog.name} is a friendly ${dog.size?.toLowerCase() || 'small'} sized ${dog.gender?.toLowerCase() || 'female'} ${dog.age?.toLowerCase() || 'young'} dog.`}
+                    dog={dog.dog}
                 />
               </div>
-              {index === images.length - 1 && <div className="spacer" />}
+              {index === dogs.length - 1 && <div className="spacer" />}
             </React.Fragment>
           );
         })}
       </div>
-      {images?.length > 1 && (
+      {dogs?.length > 1 && (
         <div className="col-6 dotsContainer">
           <div className="flex dotsScrollableContainer">
-            {images?.map((_el, index) => {
+            {dogs?.map((el, index) => {
               return (
                 <span
                   key={index}
-                  className={`dot
-                    ${index === activeDot ? 'activeDot' : ""}
-                  }`}
+                  className={`dot ${index === activeDot ? "activeDot" : ""}`}
                 />
               );
             })}
@@ -128,5 +134,6 @@ function Carousel({ images }) {
   );
 }
 
-export default Carousel;
+export default CardCarousel;
+
 

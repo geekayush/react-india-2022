@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import debounce from "lodash/debounce";
-import Card from "../Card/Card_css_m";
+import Card from "../Card/Card";
 import "./CardCarousel.css";
 
 function CardCarousel({ dogs }) {

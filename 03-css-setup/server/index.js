@@ -6,7 +6,7 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = process.env.SERVER_ENDPOINT ? process.env.SERVER_ENDPOINT : 3001;
+const PORT = process.env.PORT ? process.env.PORT : 3001;
 
 const PublicFolder = path.resolve(
   __dirname,

@@ -1,7 +1,7 @@
 import { request } from "../util/request";
 
-const basePath = process.env.SERVER_ENDPOINT
-  ? process.env.SERVER_ENDPOINT
+const basePath = process.env.PORT
+  ? process.env.PORT
   : "http://localhost:3001";
 
 export const getBreeds = () => {

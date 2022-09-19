@@ -1,8 +1,7 @@
 import { request } from "../util/request";
 
-const basePath = process.env.SERVER_ENDPOINT
-  ? process.env.SERVER_ENDPOINT
-  : "http://localhost:3001";
+const hasPort = window.location.port;
+const basePath = hasPort ? "http://localhost:3001" : "";
 
 export const getBreeds = () => {
   return request.get(`${basePath}/api/breeds`);

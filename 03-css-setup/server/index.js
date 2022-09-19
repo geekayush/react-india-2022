@@ -19,7 +19,12 @@ app.use("*", cors());
 
 app.use("/api", Api);
 
-app.use("/", express.static(PublicFolder));
+app.use("/", (req, res, next) => {
+  if (req.originalUrl.indexOf('fonts') > -1) {
+    res.header("Cache-Control", "public, max-age=604800, stale-while-revalidate=86400")
+  }
+  next()
+}, express.static(PublicFolder));
 app.use("*", express.static(PublicFolder + "/index.html"));
 
 app.listen(PORT, () => {

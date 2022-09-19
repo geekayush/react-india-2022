@@ -1,18 +1,12 @@
-body {
-  font-family: "Poppins", sans-serif;
-}
-
 p {
   color: #666;
 }
 
 h2 {
-  font-family: "Poppins";
-  /* font-style: italic; */
-  font-weight: 700;
   font-size: 2em;
   color: #e74c3c;
 }
+
 .centered {
   margin: 0 auto;
   padding: 0 1em;
@@ -74,7 +68,8 @@ body {
 
 .card {
   background: white;
-  margin-bottom: 2em;
+  padding-top: 8px;
+  padding-bottom: 16px;
 }
 
 .card a {
@@ -88,13 +83,12 @@ body {
 }
 
 .card-content {
-  padding: 1.4em;
+  padding: 4px;
 }
 
 .card-content h2 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  /* font-weight: normal */
+  margin: 0px;
+  font-weight: normal;
 }
 
 .card-content p {
@@ -140,7 +134,7 @@ img {
   flex-flow: column nowrap;
 }
 
-.mandatoryScrollSnapping > div {
+.mandatoryScrollSnapping>div {
   scroll-snap-stop: always;
 }
 
@@ -184,7 +178,7 @@ img {
 
 .bannerImg {
   border-radius: 4px;
-  height: 440px;
+  height: 316px;
 }
 
 .spacer {
@@ -217,4 +211,26 @@ img {
 
 .activeDot {
   background-color: #3b3b3b;
+}
+
+/* Dog component css */
+
+.details {
+  display: block;
+}
+
+
+.button {
+  width: 100%;
+  background-color: #e74c3c;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0 4px;
 }

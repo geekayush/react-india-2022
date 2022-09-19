@@ -8,30 +8,25 @@ const serverRenderer = require("./middleware/renderer");
 const app = express();
 const router = express.Router();
 
+const PORT = process.env.PORT ? process.env.PORT : 3001;
+
 const PublicFolder = path.resolve(
   __dirname,
-  process.env.NODE_ENV !== "dev" ? "../build/static" : "../src/static"
+  process.env.NODE_ENV !== "development" ? "../build" : "../public"
 );
 
-if (process.env.NODE_ENV !== "dev")
-  app.use(favicon(path.join(__dirname, "../build", "favicon.ico")));
+app.use(favicon(path.join(PublicFolder, "favicon.ico")));
 
 app.use("*", cors());
 
 app.use("/api", Api);
 
-app.use("/api", (req, res) => {
-  res.status(404).send("why?");
-});
-
-app.use("/static", express.static(PublicFolder));
+app.use("/static", express.static(PublicFolder + "/static"));
 
 router.use("*", serverRenderer);
 
-// router.use(express.static(path.resolve(PublicFolder)));
-
 app.use(router);
 
-app.listen(3003, () => {
-  console.log("server started on port 3003");
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });

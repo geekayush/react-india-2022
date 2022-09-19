@@ -22,14 +22,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "nossr:client:serve": "npm run build && serve -s build",
-    "prod": "npm run build && NODE_ENV=production && npm run server",
-    "server": "nodemon ./server/index.js",
-    "start": "DISABLE_ESLINT_PLUGIN=true react-app-rewired start",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "ssr": "rm -rf build && npm run build && nodemon ./server/bootstrap.js"
+    "start": "DISABLE_ESLINT_PLUGIN=true NODE_ENV=development react-app-rewired start",
+    "server:dev": "NODE_ENV=development nodemon ./server/index",
+    "build": "DISABLE_ESLINT_PLUGIN=true NODE_ENV=production react-app-rewired build",
+    "serve": "serve -s build",
+    "server:prod": "NODE_ENV=production nodemon ./server/index",
+    "ssr": "rm -rf build && npm run build && NODE_ENV=production nodemon ./server/bootstrap"
   },
   "eslintConfig": {
     "extends": [

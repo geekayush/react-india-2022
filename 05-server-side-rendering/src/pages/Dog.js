@@ -5,33 +5,22 @@ import Loader from "../components/Loader/Loader";
 import Carousel from "../components/Carousel/Carousel";
 
 import { getDog } from "../api";
+import { useDispatch, useSelector } from "react-redux";
 
 const Product = () => {
+  const dispatch = useDispatch();
   const { name } = useParams();
-  const [loading, setLoading] = useState(true);
-  const [dog, setDog] = useState({
-    images: [],
-    name: "",
-    animal: "",
-    breed: "",
-    city: "",
-    state: "",
-    description: "",
-  });
+  const [loading, setLoading] = useState(false);
+  const dog = useSelector((state) => state.dog);
 
   useEffect(() => {
-    getDog(name.toLowerCase()).then((data) => {
-      setDog({
-        images: data.photos,
-        name: data.name,
-        animal: data.animal,
-        breed: data.breed,
-        city: data.city,
-        state: data.state,
-        description: data.description,
+    if (!dog.name) {
+      setLoading(true);
+      getDog(name.toLowerCase()).then((data) => {
+        dispatch({ type: "populate/dog", payload: data });
+        setLoading(false);
       });
-      setLoading(false);
-    });
+    }
   }, []);
 
   return (

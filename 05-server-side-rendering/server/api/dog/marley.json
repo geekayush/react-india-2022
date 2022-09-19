@@ -6,11 +6,11 @@
     "breed": "Akita",
     "description": "This giant boy (about 85 pounds & 2 years old) is a sofy at heart. He takes treats so gently...",
     "photos": [
-      "/images/dogs/marley/1.jpeg",
-      "/images/dogs/marley/2.jpeg",
-      "/images/dogs/marley/3.jpeg",
-      "/images/dogs/marley/4.jpeg",
-      "/images/dogs/marley/5.jpeg"
+      "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704134/1/?width=248",
+      "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704134/2/?width=248",
+      "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704134/3/?width=248",
+      "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704134/4/?width=248",
+      "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56704134/5/?width=248"
     ],
     "city": "Tracy",
     "state": "CA"

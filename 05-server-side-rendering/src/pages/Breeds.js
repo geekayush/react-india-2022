@@ -8,14 +8,17 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const breeds = useSelector((state) => state.breeds);
 
   useEffect(() => {
-    getBreeds().then((data) => {
-      dispatch({ type: "populate/breeds", payload: data });
-      setLoading(false);
-    });
+    if (!breeds.length) {
+      setLoading(true);
+      getBreeds().then((data) => {
+        dispatch({ type: "populate/breeds", payload: data });
+        setLoading(false);
+      });
+    }
   }, []);
 
   return (

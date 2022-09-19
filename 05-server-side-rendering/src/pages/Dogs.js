@@ -6,38 +6,22 @@ import Card from "../components/Card/Card";
 
 import { getDogs } from "../api";
 
+import { useSelector, useDispatch } from "react-redux";
+
 const Category = () => {
+  const dispatch = useDispatch();
   const { breed } = useParams();
-  const [loading, setLoading] = useState(true);
-  const [dogs, setDogs] = useState([]);
-
-  const resolveAfter2Seconds = (x) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(x);
-      }, x);
-    });
-  };
-
-  const f1 = async () => {
-    const x = await resolveAfter2Seconds(500);
-    console.log(x); // 10
-  };
+  const [loading, setLoading] = useState(false);
+  const dogs = useSelector((state) => state.dogs);
 
   useEffect(() => {
-    getDogs(breed.toLowerCase()).then((data) => {
-      setDogs(data);
-      setLoading(false);
-    });
-
-    // setTimeout( () => {
-    //   const x = await new Promise((resolve, reject) => {
-    //     setTimeout(() => {
-    //       resolve()
-    //     }, 100);
-    //   })
-    // }, 0);
-    // await setTimeout(() => {f1()}, 3000)
+    if (!dogs.length) {
+      setLoading(true);
+      getDogs(breed.toLowerCase()).then((data) => {
+        dispatch({ type: "populate/dogs", payload: data });
+        setLoading(false);
+      });
+    }
   }, []);
 
   return (
@@ -51,7 +35,6 @@ const Category = () => {
             <Card
               url={`/${dog.name?.toLowerCase()}`}
               header={dog.name}
-              description={dog.description || "No dog description present!"}
               image={dog.image}
             />
           ))}

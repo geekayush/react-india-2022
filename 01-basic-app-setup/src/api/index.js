@@ -1,6 +1,7 @@
 import { request } from "../util/request";
 
-const basePath = process.env.NODE_ENV !== 'production' ? 'http://localhost:3002' : ''
+const hasPort = window.location.port
+const basePath = hasPort ? "http://localhost:3001" : '';
 
 export const getBreeds = () => {
   return request.get(`${basePath}/api/breeds`);
@@ -13,4 +14,3 @@ export const getDogs = (breed) => {
 export const getDog = (name) => {
   return request.get(`${basePath}/api/dog/${name}`);
 };
-

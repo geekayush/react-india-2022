@@ -28,7 +28,7 @@
     "serve": "serve -s build",
     "server:prod": "NODE_ENV=production nodemon ./server/index",
     "prod": "npm run build && npm run server:prod",
-    "ssr": "rm -rf build && npm run build && NODE_ENV=production nodemon ./server/bootstrap"
+    "ssr": "NODE_ENV=production nodemon ./server/bootstrap"
   },
   "eslintConfig": {
     "extends": [

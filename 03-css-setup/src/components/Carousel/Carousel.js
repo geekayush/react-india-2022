@@ -1,28 +1,65 @@
-import { useState } from "react";
-import css from "./Carousel.module.css"
+import React, { useState, useRef, useCallback } from "react";
+import debounce from "lodash/debounce";
+import "./Carousel.css";
 
-const Carousel = ({
-  images = ["http://pets-images.dev-apis.com/pets/none.jpg"],
-}) => {
-  const [active, setActive] = useState(0);
+function Carousel({ images }) {
+  /* Slider Logic Starts here */
+  const [activeDot, setActiveDot] = useState(0);
+  const imageSliderRef = useRef(null);
+
+  const handleScroll = () => {
+    const scrolledItem = parseInt(
+      (parseInt(imageSliderRef.current.scrollWidth) -
+        parseInt(imageSliderRef.current.scrollLeft)) /
+        (parseInt(imageSliderRef.current.clientWidth) - 24)
+    );
+    setActiveDot(images.length - scrolledItem);
+  };
+
+  const debouncedChangeDots = useCallback(debounce(handleScroll, 10), []);
+  /* Slider Logic Ends here */
 
   return (
-    <div className={css.carousel}>
-      <img src={images[active]} alt="animal" />
-      <div className={css['carousel-smaller']}>
-        {images.map((photo, index) => (
-          <img
-            key={photo}
-            src={photo}
-            className={index === active ? "active" : ""}
-            alt="animal thumbnail"
-            onClick={() => setActive(index)}
-            data-index={index}
-          />
-        ))}
+    <div className="slider">
+      <div
+        className="container-fluid slides x mandatoryScrollSnapping"
+        ref={imageSliderRef}
+        onScroll={debouncedChangeDots}
+      >
+        {images?.map((image, index) => {
+          return (
+            <React.Fragment key={index}>
+              {index === 0 && <div className="spacer" />}
+              <div className="col-6 marginBoth-8 slide">
+                <img
+                  src={image}
+                  alt="animal thumbnail"
+                  className="bannerImg"
+                />
+              </div>
+              {index === images.length - 1 && <div className="spacer" />}
+            </React.Fragment>
+          );
+        })}
       </div>
+      {images?.length > 1 && (
+        <div className="col-6 dotsContainer">
+          <div className="flex dotsScrollableContainer">
+            {images?.map((_el, index) => {
+              return (
+                <span
+                  key={index}
+                  className={`dot
+                    ${index === activeDot ? 'activeDot' : ""}
+                  }`}
+                />
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
-};
+}
 
 export default Carousel;

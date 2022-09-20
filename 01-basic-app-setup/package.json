@@ -1,46 +1,46 @@
 {
-    "name": "01-basic-app-setup",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "axios": "^0.27.2",
-        "cors": "^2.8.5",
-        "express": "^4.18.1",
-        "lodash": "^4.17.21",
-        "nodemon": "^2.0.19",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-router-dom": "^6.3.0",
-        "react-scripts": "5.0.1",
-        "serve-favicon": "^2.5.0"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-        "server": "nodemon ./server/index.js",
-        "nossr:client:serve": "npm run build && serve -s build",
-        "prod": "npm run build && NODE_ENV=production && npm run server"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "prettier": {
-        "tabWidth": 4,
-        "indentStyle": "space"
-    }
+  "name": "01-basic-app-setup",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "scripts": {
+    "start": "DISABLE_ESLINT_PLUGIN=true NODE_ENV=development react-scripts start",
+    "server:dev": "NODE_ENV=development nodemon ./server/index",
+    "build": "DISABLE_ESLINT_PLUGIN=true NODE_ENV=production react-scripts build",
+    "serve": "serve -s build",
+    "server:prod": "NODE_ENV=production nodemon ./server/index"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "indentStyle": "space"
+  }
 }

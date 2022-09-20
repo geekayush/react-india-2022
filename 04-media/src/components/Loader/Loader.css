@@ -1,0 +1,31 @@
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.box {
+  background: #e74c3c;
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  border-radius: 2px;
+  animation: zoom 1s infinite;
+}
+
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}

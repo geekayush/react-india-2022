@@ -3,8 +3,10 @@ import { useParams } from "react-router-dom";
 
 import Loader from "../components/Loader/Loader";
 import Carousel from "../components/Carousel/Carousel";
+import CardCarousel from "../components/CardCarousel/CardCarousel";
+import ContentPageTitle from "../components/ContentPageTitle/ContentPageTitle";
 
-import { getDog } from "../api";
+import { getDog, getDogs } from "../api";
 
 const Product = () => {
   const { name } = useParams();
@@ -19,6 +21,8 @@ const Product = () => {
     description: "",
   });
 
+  const [relatedDogs, setDogs] = useState([]);
+
   useEffect(() => {
     getDog(name.toLowerCase()).then((data) => {
       setDog({
@@ -30,26 +34,32 @@ const Product = () => {
         state: data.state,
         description: data.description,
       });
-      setLoading(false);
+      if (data.breed) {
+        getDogs(data?.breed?.toLowerCase()).then((resp) => {
+          setDogs(resp);
+          setLoading(false);
+        });
+      } else {
+        setLoading(false);
+      }
     });
   }, []);
 
   return (
-    <div className="centered">
+    <>
       {loading ? (
         <Loader />
       ) : (
         <div className="details">
           <Carousel images={dog.images} />
           <div>
-            <h1>{dog.name}</h1>
-            <h2>{`${dog.animal} — ${dog.breed} — ${dog.city}, ${dog.state}`}</h2>
-            <button>Adopt {dog.name}</button>
-            <p>{dog.description}</p>
+            <ContentPageTitle dog={dog} />
+            <p className="container-fluid col-6">{dog.description}</p>
           </div>
+          {relatedDogs && <CardCarousel dogs={relatedDogs} />}
         </div>
       )}
-    </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
+  color: #3b3b3b;
 }
 
 p {
@@ -10,6 +11,7 @@ h2 {
   font-size: 2em;
   color: #e74c3c;
 }
+
 .centered {
   margin: 0 auto;
   padding: 0 1em;
@@ -71,7 +73,8 @@ body {
 
 .card {
   background: white;
-  margin-bottom: 2em;
+  padding-top: 8px;
+  padding-bottom: 16px;
 }
 
 .card a {
@@ -85,12 +88,11 @@ body {
 }
 
 .card-content {
-  padding: 1.4em;
+  padding: 4px;
 }
 
 .card-content h2 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin: 0px;
   font-weight: normal;
 }
 
@@ -130,34 +132,109 @@ img {
   }
 }
 
-.carousel {
+.slider {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  height: 400px;
-  margin-top: 8px;
+  justify-content: space-between;
+  flex-flow: column nowrap;
 }
 
-.carousel > img {
-  max-width: 45%;
-  max-height: 400px;
+.mandatoryScrollSnapping>div {
+  scroll-snap-stop: always;
 }
 
-.carousel-smaller {
-  width: 50%;
+.x.mandatoryScrollSnapping {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
-.carousel-smaller > img {
-  width: 100px;
-  height: 100px;
+.slides {
+  display: flex;
+  overflow-x: auto;
+  flex: none;
+  width: 100%;
+  scrollbar-width: none;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.x {
+  width: 100%;
+  flex-flow: row nowrap;
+}
+
+.slide {
+  text-align: center;
+  display: grid;
+  scroll-snap-align: center;
+  flex: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bannerImg {
+  border-radius: 4px;
+  height: 316px;
+}
+
+.spacer {
+  padding-left: 12px;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+}
+
+.dotsScrollableContainer {
+  transition: transform 0.5s ease;
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  margin: 0 2px;
+  background-color: #a9a9a9;
   border-radius: 50%;
   display: inline-block;
-  margin: 15px;
-  cursor: pointer;
-  border: 2px solid #333;
+  flex-shrink: 0;
+  transition: width 0.3s ease;
 }
 
-.carousel-smaller > img.active {
-  border-color: #333;
-  opacity: 0.6;
+.activeDot {
+  background-color: #3b3b3b;
+}
+
+/* Dog component css */
+.details {
+  display: block;
+}
+
+
+.button {
+  width: 100%;
+  background-color: #e74c3c;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0 4px;
 }

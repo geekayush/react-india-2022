@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom";
 
-const Card = ({ url, image, header, description }) => (
+const Card = ({ url, image, header, description, imgHeight }) => (
     <article className="card">
         <Link to={url}>
             {image && (
                 <figure className="thumbnail">
-                    <img src={`${image}`} alt="meow" />
+                    <img src={`${image}`} alt="meow"  style={
+                        {
+                            height: imgHeight + 'px' || "auto"
+                        }
+                    }/>
                 </figure>
             )}
             {(header || description) && (
                 <div className="card-content">
                     {header && <h2>{header}</h2>}
-                    {description && <p>{description}</p>}
+                    {description && <p className="marginTop-8 bodyRegular">{description}</p>}
                 </div>
             )}
         </Link>

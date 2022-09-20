@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from "react";
-import debounce from "lodash/debounce";
+import * as _ from "lodash";
 import Card from "../Card/Card";
 import "./CardCarousel.css";
 
@@ -17,7 +17,7 @@ function CardCarousel({ dogs }) {
     setActiveDot(dogs.length - scrolledItem);
   };
 
-  const debouncedChangeDots = useCallback(debounce(handleScroll, 10), []);
+  const debouncedChangeDots = useCallback(_.debounce(handleScroll, 10), []);
   /* Slider Logic Ends here */
 
   return (

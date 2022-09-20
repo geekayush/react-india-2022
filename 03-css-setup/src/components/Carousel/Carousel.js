@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import debounce from "lodash/debounce";
-import css from "./Carousel.module.css";
+import "./Carousel.css";
 
 function Carousel({ images }) {
   /* Slider Logic Starts here */
@@ -20,37 +20,37 @@ function Carousel({ images }) {
   /* Slider Logic Ends here */
 
   return (
-    <div className={css.slider}>
+    <div className="slider">
       <div
-        className={`${css.slides} ${css.x} ${css.mandatoryScrollSnapping}`}
+        className="container-fluid slides x mandatoryScrollSnapping"
         ref={imageSliderRef}
         onScroll={debouncedChangeDots}
       >
         {images?.map((image, index) => {
           return (
             <React.Fragment key={index}>
-              {index === 0 && <div className={css.spacer} />}
-              <div className={css.slide}>
+              {index === 0 && <div className="spacer" />}
+              <div className="col-6 marginBoth-8 slide">
                 <img
                   src={image}
                   alt="animal thumbnail"
-                  className={css.bannerImg}
+                  className="bannerImg"
                 />
               </div>
-              {index === images.length - 1 && <div className={css.spacer} />}
+              {index === images.length - 1 && <div className="spacer" />}
             </React.Fragment>
           );
         })}
       </div>
       {images?.length > 1 && (
-        <div className={css.dotsContainer}>
-          <div className={css.dotsScrollableContainer}>
-            {images?.map((el, index) => {
+        <div className="col-6 dotsContainer">
+          <div className="flex dotsScrollableContainer">
+            {images?.map((_el, index) => {
               return (
                 <span
                   key={index}
-                  className={`${css.dot} ${
-                    index === activeDot ? css.activeDot : ""
+                  className={`dot
+                    ${index === activeDot ? 'activeDot' : ""}
                   }`}
                 />
               );

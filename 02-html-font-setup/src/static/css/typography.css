@@ -1,12 +1,12 @@
-/* @font-face {
-    font-family: "Poppins";
+@font-face {
+    font-family: "Poppins-Regular-Subset";
     font-style: normal;
     font-weight: 400;
     font-display: optional;
     src: local("Poppins Regular"), local("Poppins-Regular"),
         url("../fonts/Poppins-Regular-Subset.woff2") format("woff2");
     unicode-range: U+0020-007F, U+201C, U+201D, U+00A;
-} */
+}
 
 @font-face {
     font-family: "Poppins-Regular";
@@ -15,7 +15,6 @@
     font-display: optional;
     src: local("Poppins Regular"), local("Poppins-Regular"),
         url("../fonts/Poppins-Regular.woff2") format("woff2");
-    /* unicode-range: U+0020-007F, U+201C, U+201D, U+00A; */
 }
 
 @font-face {

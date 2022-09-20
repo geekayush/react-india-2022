@@ -13,6 +13,7 @@ h2 {
   font-size: 2em;
   color: #e74c3c;
 }
+
 .centered {
   margin: 0 auto;
   padding: 0 1em;
@@ -104,6 +105,7 @@ body {
 img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 40em) {
@@ -140,7 +142,7 @@ img {
   flex-flow: column nowrap;
 }
 
-.mandatoryScrollSnapping > div {
+.mandatoryScrollSnapping>div {
   scroll-snap-stop: always;
 }
 

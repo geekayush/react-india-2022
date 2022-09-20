@@ -393,6 +393,7 @@ body {
 img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 40em) {
@@ -429,7 +430,7 @@ img {
   flex-flow: column nowrap;
 }
 
-.mandatoryScrollSnapping > div {
+.mandatoryScrollSnapping>div {
   scroll-snap-stop: always;
 }
 

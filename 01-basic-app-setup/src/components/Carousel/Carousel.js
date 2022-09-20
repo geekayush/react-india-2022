@@ -21,8 +21,7 @@ function Carousel({ images }) {
   return (
     <div className="slider">
       <div
-        class="container-fluid"
-        className=" slides x mandatoryScrollSnapping"
+        className="container-fluid slides x mandatoryScrollSnapping"
         ref={imageSliderRef}
         onScroll={debouncedChangeDots}
       >

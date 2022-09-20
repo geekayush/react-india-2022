@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 400;
     /* Uncomment me! to resolve FOIT problem*/
-    /* font-display: optional; */
+    font-display: optional;
     src: local("Poppins Regular"), local("Poppins-Regular"),
         url("../fonts/Poppins-Regular-Subset.woff2") format("woff2");
     unicode-range: U+0020-007F, U+201C, U+201D, U+00A;
@@ -14,7 +14,7 @@
     font-style: normal;
     font-weight: 400;
     /* Uncomment me! to resolve FOIT problem*/
-    /* font-display: optional; */
+    font-display: optional;
     src: local("Poppins Regular"), local("Poppins-Regular"),
         url("../fonts/Poppins-Regular.woff2") format("woff2");
 }
@@ -24,7 +24,7 @@
     font-style: italic;
     font-weight: 400;
     /* Uncomment me! to resolve FOIT problem*/
-    /* font-display: optional; */
+    font-display: optional;
     src: local("Poppins Italic"), local("Poppins-Italic"),
         url("../fonts/Poppins-Italic-Subset.woff2") format("woff2");
     unicode-range: U+0020-007F, U+201C, U+201D, U+00A;
@@ -36,7 +36,7 @@
     font-style: normal;
     font-weight: 700;
     /* Uncomment me! to resolve FOIT problem*/
-    /* font-display: optional; */
+    font-display: optional;
     src: local("Poppins Bold"), local("Poppins-Bold"),
         url("../fonts/Poppins-Bold-Subset.woff2") format("woff2");
     unicode-range: U+0020-007F, U+201C, U+201D, U+00A;
@@ -47,7 +47,7 @@
     font-style: italic;
     font-weight: 700;
     /* Uncomment me! to resolve FOIT problem*/
-    /* font-display: optional; */
+    font-display: optional;
     src: local("Poppins Bold Italic"), local("Poppins-Bold-Italic"),
         url("../fonts/Poppins-BoldItalic.woff2") format("woff2");
     /* unicode-range: U+0020-007F, U+201C, U+201D, U+00A; */

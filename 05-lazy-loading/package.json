@@ -1,5 +1,5 @@
 {
-  "name": "04-media",
+  "name": "05-lazy-loading",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -511,6 +511,7 @@ img {
 
 .avatar {
   border-radius: 50%;
+  width: auto !important;
 }
 
 .imageBoxMedium {

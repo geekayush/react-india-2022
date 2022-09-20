@@ -10,6 +10,7 @@
 /* Avatar classes */
 .avatar {
     border-radius: 50%;
+    width: auto;
 }
 
 .imageBoxMedium {

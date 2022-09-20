@@ -9,7 +9,7 @@ import Dog from "./pages/Dog";
 // Using Carousel Styled (CSS-in-JS) component
 // import DogWithStyled from "./pages/Dog_with_styled";
 
-import * as _ from "lodash"
+
 
 function App() {
     return (

@@ -1,6 +1,8 @@
 .card {
+  background: #fff;
   padding-top: 8px;
   padding-bottom: 16px;
+  margin-bottom: 2em;
 }
 
 .card a {
@@ -19,7 +21,7 @@
 
 .card-content h2 {
   margin: 0px;
-  font-weight: normal
+  font-weight: normal;
 }
 
 .card-content p {
@@ -32,7 +34,6 @@ img {
 }
 
 @media screen and (min-width: 40em) {
-
   .card {
     margin-bottom: 1em;
     display: flex;
@@ -41,7 +42,6 @@ img {
 }
 
 @media screen and (min-width: 60em) {
-
   .card {
     margin-bottom: 2em;
     display: flex;

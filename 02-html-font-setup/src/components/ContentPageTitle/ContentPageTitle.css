@@ -1,0 +1,18 @@
+.anchor {
+    text-decoration: underline;
+}
+
+.marginLeft8 {
+    margin-left: 8px;
+}
+
+
+/* Avatar classes */
+.avatar {
+    border-radius: 50%;
+}
+
+.imageBoxMedium {
+    width: 45px;
+    height: 45px;
+}

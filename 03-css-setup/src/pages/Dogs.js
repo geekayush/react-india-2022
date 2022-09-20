@@ -30,7 +30,6 @@ const Category = () => {
             <Card
               url={`/${dog.name?.toLowerCase()}`}
               header={dog.name}
-              description={dog.description || "No dog description present!"}
               image={dog.image}
             />
           ))}

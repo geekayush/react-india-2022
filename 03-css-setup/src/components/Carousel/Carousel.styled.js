@@ -22,6 +22,7 @@ const CarouselSlides = styled.div`
   position: relative;
   width: 100%;
   flex-flow: row nowrap;
+  padding: 0 12px;
 `;
 
 const Spacer = styled.div`
@@ -35,15 +36,19 @@ const Slide = styled.div`
   scroll-snap-align: center;
   flex: none;
   scroll-snap-stop: always;
+  margin: 0 8px;
+  width: calc(calc(100vw - 72px) + 40px);
 `;
 
 const Banner = styled.img`
   border-radius: 4px;
-  height: 440px;
+  height: 316px;
 `;
 
 const DotsContainer = styled.div`
-  display: flex;
+  width: calc(calc(100vw - 72px) + 40px);
+  margin-left: 4px;
+  margin-right: 4px;
   justify-content: center;
   overflow: hidden;
   position: relative;
@@ -53,6 +58,7 @@ const DotsContainer = styled.div`
 
 const DotsScrollableContainer = styled.div`
   transition: transform 0.5s ease;
+  display: flex;
 `;
 
 const Dot = styled.span`

@@ -1,5 +1,5 @@
 {
-  "name": "03-css-setup",
+  "name": "04-media",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +23,8 @@
     "server:dev": "NODE_ENV=development nodemon ./server/index",
     "build": "DISABLE_ESLINT_PLUGIN=true NODE_ENV=production react-app-rewired build",
     "serve": "serve -s build",
-    "server:prod": "NODE_ENV=production nodemon ./server/index"
+    "server:prod": "NODE_ENV=production nodemon ./server/index",
+    "prod": "npm run build && npm run server:prod"
   },
   "eslintConfig": {
     "extends": [

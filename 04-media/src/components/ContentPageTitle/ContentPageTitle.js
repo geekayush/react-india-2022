@@ -16,7 +16,9 @@ const ContentPageTitle = React.memo(function ContentPageTitle({ dog = {} }) {
         </div>
         <div className="marginTop-16 flex alignCenter">
           <img
-            className={`${css.avatar} ${css.imageBoxMedium}`}
+            className={`${css.avatar}`}
+            // Uncomment me! To improve your CLS!
+            // className={`${css.avatar} ${css.imageBoxMedium}`}
             src="https://onemg.gumlet.io/image/upload/staging/se4somos7fs1k4zlsjbt.jpg?width=45"
             alt={dog.name || "Avatar"}
           />

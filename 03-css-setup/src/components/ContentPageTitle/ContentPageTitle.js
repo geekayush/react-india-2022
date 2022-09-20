@@ -15,8 +15,8 @@ const ContentPageTitle = React.memo(function ContentPageTitle({ dog = {} }) {
         </div>
         <div className="marginTop-16 flex alignCenter">
           <img
-            className="avatar imageBoxMedium"
-            src="/images/icon.jpg"
+            className="avatar"
+            src="https://onemg.gumlet.io/image/upload/staging/se4somos7fs1k4zlsjbt.jpg?width=45"
             alt={dog.name || "Avatar"}
           />
           <div className="flexColumn marginLeft8">

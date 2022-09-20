@@ -1,5 +1,5 @@
 {
-  "name": "04-media",
+  "name": "05-lazy-loading",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,8 +23,7 @@
     "server:dev": "NODE_ENV=development nodemon ./server/index",
     "build": "DISABLE_ESLINT_PLUGIN=true NODE_ENV=production react-app-rewired build",
     "serve": "serve -s build",
-    "server:prod": "NODE_ENV=production nodemon ./server/index",
-    "prod": "npm run build && npm run server:prod"
+    "server:prod": "NODE_ENV=production nodemon ./server/index"
   },
   "eslintConfig": {
     "extends": [

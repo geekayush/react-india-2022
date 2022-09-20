@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 const Breeds = lazy(() => import("./pages/Breeds"));
 const Dogs = lazy(() => import("./pages/Dogs"));
 const Dog = lazy(() => import("./pages/Dog"));
-import * as _ from "lodash";
+;
 
 import "./static/css/app.css";
 

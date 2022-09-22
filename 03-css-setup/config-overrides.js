@@ -6,5 +6,5 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = override(
   // @uncomment to show inline CSS
-  // addWebpackPlugin(new HTMLInlineCSSWebpackPlugin())
+  addWebpackPlugin(new HTMLInlineCSSWebpackPlugin())
 );

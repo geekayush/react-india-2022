@@ -1,15 +1,4 @@
 @font-face {
-    font-family: "Poppins-Regular-Subset";
-    font-style: normal;
-    font-weight: 400;
-    /* Uncomment me! to resolve FOIT problem*/
-    font-display: optional;
-    src: local("Poppins Regular"), local("Poppins-Regular"),
-        url("../fonts/Poppins-Regular-Subset.woff2") format("woff2");
-    unicode-range: U+0020-007F, U+201C, U+201D, U+00A;
-}
-
-@font-face {
     font-family: "Poppins-Regular";
     font-style: normal;
     font-weight: 400;
@@ -51,4 +40,15 @@
     src: local("Poppins Bold Italic"), local("Poppins-Bold-Italic"),
         url("../fonts/Poppins-BoldItalic.woff2") format("woff2");
     /* unicode-range: U+0020-007F, U+201C, U+201D, U+00A; */
+}
+
+@font-face {
+    font-family: "Poppins-Regular-Subset";
+    font-style: normal;
+    font-weight: 400;
+    /* Uncomment me! to resolve FOIT problem*/
+    /* font-display: optional; */
+    src: local("Poppins Regular"), local("Poppins-Regular"),
+        url("../fonts/Poppins-Regular-Subset.woff2") format("woff2");
+    unicode-range: U+0020-007F, U+201C, U+201D, U+00A;
 }

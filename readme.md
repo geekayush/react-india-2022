@@ -8,7 +8,7 @@ sh setup.sh
 ```
 This command installs node modules inside each of the directory.
 
-To deploy these builds on heroku
+## To deploy these builds on heroku
 run the corresponding `deploy_[].sh` command after setting up heroku cli.
 
 Inside the script, replace the remote for heroku with the one you create.

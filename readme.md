@@ -8,6 +8,14 @@ sh setup.sh
 ```
 This command installs node modules inside each of the directory.
 
+## To deploy these builds on local
+```
+npm run prod
+```
+from inside the correct folder. 
+open url localhost:3001/marley in mobile view
+
+
 ## To deploy these builds on heroku
 run the corresponding `deploy_[].sh` command after setting up heroku cli.
 
